@@ -1,10 +1,13 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
 
 const EmployeeList = () => {
   const navigate = useNavigate();
   const goToDetailPage = () => {
     navigate("/employee-detail/e001");
+  };
+
+  const gotoAddUser = () => {
+    navigate("/addEmployee");
   };
 
   const employees = [
@@ -73,6 +76,9 @@ const EmployeeList = () => {
           ))}
         </tbody>
       </table>
+      <button className="btn btn-primary" onClick={gotoAddUser}>
+        Add User
+      </button>
     </div>
   );
 };
